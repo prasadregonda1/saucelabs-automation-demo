@@ -1,0 +1,28 @@
+{
+  "name": "testplay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:headless": "HEADLESS=true cucumber-js",
+    "test:tags": "cucumber-js --tags",
+    "report": "open reports/cucumber-report.html",
+    "allure:generate": "allure generate reports/allure-results --clean -o reports/allure-report",
+    "allure:open": "allure open reports/allure-report",
+    "allure:serve": "allure serve reports/allure-results",
+    "test:allure": "HEADLESS=true cucumber-js && npm run allure:generate && npm run allure:open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.8.3",
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.7.0",
+    "allure-commandline": "^2.40.0",
+    "allure-cucumberjs": "^3.8.0",
+    "playwright": "^1.60.0"
+  }
+}
